@@ -9,7 +9,7 @@ def home():
   if not session.get('logged_in'):
     return render_template('login.html')
   else:
-    return "Ya Logd in"
+    return "Ya Logged in"
 
 @app.route('/login', methods=['POST'])
 def do_admin_login():
@@ -18,6 +18,11 @@ def do_admin_login():
   else:
     flash('wrong password!')
     return home()
+
+@app.route("/logout")
+def logout():
+  session['logged_in'] = False
+  return home()
 
 @app.route("/hello")
 def hello():

@@ -6,8 +6,12 @@
     </p>
     {%else%}
     <p>
-    <form>
-        
+    <form action="/login" method="POST">
+    <input type="text" value="" name="username"/>
+      <label for="login-name">User Name</label>
+    <input type="password" value="" name="password" />
+      <label for="login-pass">Password</label>
+      <input type="submit" value="Log in" />
     </form>
     </p>
     {%endif%}
