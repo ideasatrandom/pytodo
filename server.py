@@ -17,7 +17,6 @@ def do_admin_login():
     session['logged_in'] = True
     return example()
   else:
-    flash('wrong password!')
     return hello()
 
 @app.route("/logout")

@@ -1,10 +1,5 @@
 <html>
   <body>
-    {%if session['logged_in']%}
-    <p>
-      You're logged in
-    </p>
-    {%else%}
     <p>
     <form action="/login" method="POST">
     <label for="login-name">User Name</label>
@@ -14,6 +9,5 @@
       <input type="submit" value="Log in" />
     </form>
     </p>
-    {%endif%}
   </body>
 </html>
