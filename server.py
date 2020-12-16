@@ -14,10 +14,11 @@ def home():
 @app.route('/login', methods=['POST'])
 def do_admin_login():
   if request.form['password'] == 'password' and request.form['username'] == 'admin':
-    return redirect(url_for('/hello'))
+    session['logged_in'] = True
+    return example()
   else:
     flash('wrong password!')
-    return home()
+    return hello()
 
 @app.route("/logout")
 def logout():
